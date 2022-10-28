@@ -1,0 +1,41 @@
+
+Base de datos: Arte Frances
+
+||||||||||||||||||||||
+|      Usuarios      |
+|  _id: automatico   |
+|  nombre: string    |
+|  email:string      |
+|  password: string  |
+|  google: boolean   |
+|  role: string      |
+|  img: string       |
+|  estado: boolean   |
+|                    |
+||||||||||||||||||||||
+
+||||||||||||||||||||||
+|     categorias     |
+|  _id: automatico   |
+|  nombre: string    |
+|  usuario: objectId |
+|                    |
+||||||||||||||||||||||
+
+||||||||||||||||||||||
+|     Productos      |
+|  _id: automatico   |
+|  nombre: string    |
+|  precioUni: number |
+|  categoria:objectId|
+|  nombre: string    |
+|  disponible:boolean|
+|  usuario: objectId |
+||||||||||||||||||||||
+
+bcrypt salt: Es el numero de vueltas para 
+hacer mas complicado la desincreptacion, 
+cuanto mas vueltas mas seguro pero tarda mas.
+
+bcrypt hash: Es para encriptarlo en una sola
+via.
