@@ -31,6 +31,7 @@ const UsuarioSchema = Schema({
    rol:{
       type: String,
       require: true,
+      default: "USER_ROL",
       enum: ['ADMIN_ROLE', 'USER_ROLE']
    },
    estado:{
@@ -47,7 +48,8 @@ const UsuarioSchema = Schema({
 // ni el password ni el __v. Es decir que no lo veremos
 // en el postman, pero si en nuestra DB.
 UsuarioSchema.methods.toJSON = function(){
-   const { __v, password, ...usuario } = this.toObject();
+   const { __v, password, _id, ...usuario } = this.toObject();
+   usuario.uid = _id
    return usuario
 }
 

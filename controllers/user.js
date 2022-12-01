@@ -75,12 +75,9 @@ export const postUsuarios = async (req, res) => {
 export const deleteUsuarios = async(req, res) => {
   const { id } = req.params;
 
-  // Para borrarlo fisicamente
-  // const usuario = await Usuario.findByIdAndDelete( id )
-
   const usuario = await Usuario.findByIdAndUpdate( id, {estado: false }, { new: true });
 
   res.json({
-    usuario
+    usuario,
   });
 };
