@@ -1,0 +1,6 @@
+export { routerUploads } from './uploads.routes.js'
+export { routerBusqueda } from './buscar.routes.js'
+export { routerCategoria} from './categorias.routes.js'
+export { routerLogin } from './auth.routes.js'
+export { routerProducto } from './productos.routes.js'
+export { router } from './user.routes.js'
